@@ -105,7 +105,7 @@ class CoordinatorAgent:
         workflow.add_edge("__start__", "ingestion")
         workflow.add_conditional_edges(
             "ingestion",
-            lambda state: "retrieval" if "query" in state else END,
+            self._router,
             {"retrieval": "retrieval", END: END}
         )
         workflow.add_edge("retrieval", "llm_response")
@@ -114,8 +114,8 @@ class CoordinatorAgent:
         # Compile the graph
         return workflow.compile()
     
-    def _route_start(self, state: WorkflowState) -> str:
-        """Route the start of the workflow based on the state."""
+    def _router(self, state: WorkflowState) -> str:
+        """Route the workflow based on the state."""
         if "query" in state:
             return "retrieval"
         else:
