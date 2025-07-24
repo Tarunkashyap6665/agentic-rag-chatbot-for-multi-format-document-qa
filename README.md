@@ -143,7 +143,7 @@ The application will be available at `http://localhost:8501`.
 ├── docs/                    # Documentation
 │   ├── architecture.png     # Architecture diagram
 │   ├── flow-diagram.png     # Flow diagram
-│   └── presentation.pptx      # Presentation slides
+│   └── presentation.pptx    # Presentation slides
 ├── mcp/                     # Model Context Protocol implementation
 │   ├── message.py           # MCP message definitions
 │   └── protocol.py          # MCP protocol implementation
