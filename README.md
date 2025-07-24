@@ -145,7 +145,6 @@ The application will be available at `http://localhost:8501`.
 │   ├── flow-diagram.png     # Flow diagram
 │   └── presentation.pptx    # Presentation slides
 ├── mcp/                     # Model Context Protocol implementation
-│   ├── message.py           # MCP message definitions
 │   └── protocol.py          # MCP protocol implementation
 ├── utils/                   # Utility functions
 │   ├── document_parser.py   # Document parsing utilities
